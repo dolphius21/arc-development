@@ -28,6 +28,9 @@ function ElevationScroll(props) {
 }
 
 const useStyles = makeStyles((theme) => ({
+  appbar: {
+    zIndex: theme.zIndex.modal + 1
+  },
   toolbarMargin: {
     ...theme.mixins.toolbar,
     marginBottom: '3em',
@@ -63,7 +66,8 @@ const useStyles = makeStyles((theme) => ({
     color: 'white'
   },
   drawer: {
-    backgroundColor: theme.palette.common.blue
+    backgroundColor: theme.palette.common.blue,
+    width: '250px'
   }
 }));
 
@@ -114,6 +118,7 @@ const Header = (props) => {
         onOpen={() => setOpenDrawer(true)}
         classes={{ paper: styles.drawer }}
       >
+        <div className={styles.toolbarMargin} />
         <SidebarNav
           setOpenDrawer={setOpenDrawer}
           value={value}
@@ -134,7 +139,7 @@ const Header = (props) => {
   return (
     <>
       <ElevationScroll>
-        <AppBar>
+        <AppBar className={styles.appbar}>
           <Toolbar disableGutters>
             <Link
               to="/"
