@@ -80,9 +80,27 @@ const Header = (props) => {
     setValue(newValue);
   };
 
+  const routes = [
+    { name: 'Home', link: '/', navIndex: 0 },
+    {
+      name: 'Services',
+      link: '/services',
+      navIndex: 1
+    },
+    { name: 'The Revolution', link: '/revolution', navIndex: 2 },
+    { name: 'About Us', link: '/about', navIndex: 3 },
+    { name: 'Contact Us', link: '/contact', navIndex: 4 },
+    { name: 'Estimates', link: '/estimates', navIndex: 5 }
+  ];
+
   const mainNav = (
     <>
-      <MainNav value={value} setValue={setValue} handleChange={handleChange} />
+      <MainNav
+        value={value}
+        setValue={setValue}
+        handleChange={handleChange}
+        routes={routes}
+      />
     </>
   );
 
@@ -100,6 +118,7 @@ const Header = (props) => {
           setOpenDrawer={setOpenDrawer}
           value={value}
           setValue={setValue}
+          routes={routes}
         />
       </SwipeableDrawer>
       <IconButton

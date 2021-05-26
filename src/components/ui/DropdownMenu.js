@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       opacity: 1
     }
+  },
+  selectedMenuItem: {
+    ...theme.typography.tab,
+    opacity: 1
   }
 }));
 
@@ -26,6 +30,7 @@ const DropdownMenu = (props) => {
     open,
     value,
     handleClose,
+    menuOptions,
     selectedIndex,
     setValue,
     setAnchorEl,
@@ -40,13 +45,6 @@ const DropdownMenu = (props) => {
     setOpen(false);
     setSelectedIndex(index);
   };
-
-  const menuOptions = [
-    { name: 'Services', link: '/services' },
-    { name: 'Custom Software Development', link: '/customsoftware' },
-    { name: 'Mobile App Development', link: '/mobileapps' },
-    { name: 'Website Development', link: '/websites' }
-  ];
 
   return (
     <>
@@ -63,7 +61,11 @@ const DropdownMenu = (props) => {
             key={option.name}
             component={Link}
             to={option.link}
-            className={styles.menuItem}
+            className={
+              index === selectedIndex
+                ? styles.selectedMenuItem
+                : styles.menuItem
+            }
             onClick={(e) => {
               handleMenuItemClick(e, index);
               setValue(1);

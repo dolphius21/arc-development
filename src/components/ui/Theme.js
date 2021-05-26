@@ -32,6 +32,9 @@ export default createMuiTheme({
       textTransform: 'none',
       fontSize: '1rem',
       color: 'white',
+      boxShadow: '0px 2px 3px 0px rgba(0,0,0,0.25)',
+      backgroundColor: `${arcOrange}`,
+      opacity: 1,
       '&:hover': {
         backgroundColor: 'black',
         color: 'white'
