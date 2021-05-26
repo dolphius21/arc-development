@@ -55,6 +55,7 @@ const DropdownMenu = (props) => {
         MenuListProps={MenuListProps}
         classes={{ paper: styles.menu }}
         elevation={0}
+        keepMounted
       >
         {menuOptions.map((option, index) => (
           <MenuItem

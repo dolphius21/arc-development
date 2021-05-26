@@ -78,8 +78,8 @@ const MainNav = ({ value, setValue, handleChange, routes }) => {
         case `${route.link}`:
           if (value !== route.navIndex) {
             setValue(route.navIndex);
-            if (route.menuIndex && route.menuIndex !== selectedIndex) {
-              setSelectedIndex(route.selectedIndex);
+            if (route.navIndex && route.menuIndex !== selectedIndex) {
+              setSelectedIndex(route.menuIndex);
             }
           }
           break;
