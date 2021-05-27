@@ -72,12 +72,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Header = (props) => {
+  const { value, setValue, selectedIndex, setSelectedIndex } = props;
   const styles = useStyles();
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const matches = useMediaQuery(theme.breakpoints.down('md'));
 
-  const [value, setValue] = useState(0);
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleChange = (e, newValue) => {
@@ -102,6 +102,8 @@ const Header = (props) => {
       <MainNav
         value={value}
         setValue={setValue}
+        selectedIndex={selectedIndex}
+        setSelectedIndex={setSelectedIndex}
         handleChange={handleChange}
         routes={routes}
       />

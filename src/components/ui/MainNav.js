@@ -31,11 +31,18 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const MainNav = ({ value, setValue, handleChange, routes }) => {
+const MainNav = (props) => {
+  const {
+    value,
+    setValue,
+    selectedIndex,
+    setSelectedIndex,
+    handleChange,
+    routes
+  } = props;
   const styles = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -87,7 +94,7 @@ const MainNav = ({ value, setValue, handleChange, routes }) => {
           break;
       }
     });
-  }, [value, setValue, menuOptions, routes, selectedIndex]);
+  }, [value, setValue, menuOptions, routes, selectedIndex, setSelectedIndex]);
 
   return (
     <>
