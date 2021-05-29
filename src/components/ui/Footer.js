@@ -93,7 +93,7 @@ const Footer = ({ setValue, setSelectedIndex }) => {
                 to="/mobileapps"
                 className={styles.link}
               >
-                Mobile App Development
+                iOS/Android App Development
               </Grid>
               <Grid
                 item
