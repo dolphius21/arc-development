@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Services = () => {
+const ServicesSection = () => {
   const styles = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
@@ -163,4 +163,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesSection;
