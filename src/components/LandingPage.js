@@ -3,7 +3,9 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 // Internal Imports
 import HeroBanner from './ui/Banner';
+import RevolutionSection from './ui/RevolutionSection';
 import ServicesSection from './ui/ServicesSection';
+import InfoSection from './ui/InfoSection';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -27,6 +29,12 @@ const LandingPage = () => {
       </Grid>
       <Grid item>
         <ServicesSection />
+      </Grid>
+      <Grid item>
+        <RevolutionSection />
+      </Grid>
+      <Grid item>
+        <InfoSection />
       </Grid>
     </Grid>
   );
