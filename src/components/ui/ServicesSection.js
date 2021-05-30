@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 // Material UI Imports
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const ServicesSection = () => {
+const ServicesSection = ({ setValue, setSelectedIndex }) => {
   const styles = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
@@ -70,7 +71,16 @@ const ServicesSection = () => {
             Complete digital solutions, from investigation to{' '}
             <span className={styles.specialTxt}>celebration.</span>
           </Typography>
-          <Button variant="outlined" className={styles.learnBtn}>
+          <Button
+            variant="outlined"
+            className={styles.learnBtn}
+            component={Link}
+            to="/customsoftware"
+            onClick={() => {
+              setValue(1);
+              setSelectedIndex(1);
+            }}
+          >
             <span style={{ marginRight: 10 }}>Learn More</span>
             <ButtonArrow
               width={10}
@@ -108,7 +118,16 @@ const ServicesSection = () => {
             Integrate your web experience or create a standalone app
             {matchesSM ? null : <br />} with either mobile platform
           </Typography>
-          <Button variant="outlined" className={styles.learnBtn}>
+          <Button
+            variant="outlined"
+            className={styles.learnBtn}
+            component={Link}
+            to="/mobileapps"
+            onClick={() => {
+              setValue(1);
+              setSelectedIndex(2);
+            }}
+          >
             <span style={{ marginRight: 10 }}>Learn More</span>
             <ButtonArrow
               width={10}
@@ -146,7 +165,16 @@ const ServicesSection = () => {
           <Typography variant="subtitle1">
             Optimized for Search Engines, Built for speed.{' '}
           </Typography>
-          <Button variant="outlined" className={styles.learnBtn}>
+          <Button
+            variant="outlined"
+            className={styles.learnBtn}
+            component={Link}
+            to="/websites"
+            onClick={() => {
+              setValue(1);
+              setSelectedIndex(3);
+            }}
+          >
             <span style={{ marginRight: 10 }}>Learn More</span>
             <ButtonArrow
               width={10}

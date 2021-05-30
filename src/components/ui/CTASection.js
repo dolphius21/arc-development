@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const CTASection = () => {
+const CTASection = ({ setValue }) => {
   const styles = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
@@ -84,6 +84,7 @@ const CTASection = () => {
                 className={styles.learnBtn}
                 component={Link}
                 to="/revolution"
+                onClick={() => setValue(2)}
               >
                 <span style={{ marginRight: 5 }}>Learn More</span>
                 <ButtonArrow
@@ -101,7 +102,8 @@ const CTASection = () => {
           variant="contained"
           className={styles.estimateBtn}
           component={Link}
-          to="/estimate"
+          to="/estimates"
+          onClick={() => setValue(5)}
         >
           Free Estimate
         </Button>

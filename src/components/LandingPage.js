@@ -6,6 +6,7 @@ import HeroBanner from './ui/Banner';
 import RevolutionSection from './ui/RevolutionSection';
 import ServicesSection from './ui/ServicesSection';
 import InfoSection from './ui/InfoSection';
+import CTASection from './ui/CTASection';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -19,22 +20,31 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const LandingPage = () => {
+const LandingPage = ({ setValue, setSelectedIndex }) => {
   const styles = useStyles();
 
   return (
     <Grid container direction="column" className={styles.mainContainer}>
       <Grid item>
-        <HeroBanner />
+        <HeroBanner setValue={setValue} setSelectedIndex={setSelectedIndex} />
       </Grid>
       <Grid item>
-        <ServicesSection />
+        <ServicesSection
+          setValue={setValue}
+          setSelectedIndex={setSelectedIndex}
+        />
       </Grid>
       <Grid item>
-        <RevolutionSection />
+        <RevolutionSection
+          setValue={setValue}
+          setSelectedIndex={setSelectedIndex}
+        />
       </Grid>
       <Grid item>
-        <InfoSection />
+        <InfoSection setValue={setValue} setSelectedIndex={setSelectedIndex} />
+      </Grid>
+      <Grid item>
+        <CTASection setValue={setValue} setSelectedIndex={setSelectedIndex} />
       </Grid>
     </Grid>
   );

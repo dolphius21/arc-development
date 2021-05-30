@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Lottie from 'react-lottie';
 // Material UI Imports
 import Grid from '@material-ui/core/Grid';
@@ -47,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const HeroBanner = () => {
+const HeroBanner = ({ setValue }) => {
   const styles = useStyles();
   const theme = useTheme();
 
@@ -68,12 +69,24 @@ const HeroBanner = () => {
         </Typography>
         <Grid container justify="center" className={styles.btnContainer}>
           <Grid item>
-            <Button className={styles.estimateBtn} variant="contained">
+            <Button
+              className={styles.estimateBtn}
+              variant="contained"
+              component={Link}
+              to="/estimates"
+              onClick={() => setValue(5)}
+            >
               Free Estimate
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="outlined" className={styles.learnBtnHero}>
+            <Button
+              variant="outlined"
+              className={styles.learnBtnHero}
+              component={Link}
+              to="/revolution"
+              onClick={() => setValue(2)}
+            >
               <span style={{ marginRight: 10 }}>Learn More</span>
               <ButtonArrow
                 width={15}

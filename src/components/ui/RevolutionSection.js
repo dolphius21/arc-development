@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 // Material UI Imports
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const RevolutionSection = () => {
+const RevolutionSection = ({ setValue }) => {
   const styles = useStyles();
   const theme = useTheme();
 
@@ -61,7 +62,13 @@ const RevolutionSection = () => {
                 Visionary insights coupled with cutting-edge technology is a
                 recipe for revolution.
               </Typography>
-              <Button variant="outlined" className={styles.learnBtnHero}>
+              <Button
+                variant="outlined"
+                className={styles.learnBtnHero}
+                component={Link}
+                to="/revolution"
+                onClick={() => setValue(2)}
+              >
                 <span style={{ marginRight: 10 }}>Learn More</span>
                 <ButtonArrow
                   width={15}

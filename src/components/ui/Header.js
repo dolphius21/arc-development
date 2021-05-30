@@ -146,7 +146,10 @@ const Header = (props) => {
             <Link
               to="/"
               className={styles.logoContainer}
-              onClick={handleChange}
+              onClick={() => {
+                handleChange(0);
+                setValue(0);
+              }}
             >
               <img
                 className={styles.logo}

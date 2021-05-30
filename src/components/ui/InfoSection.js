@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 // Material UI Imports
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const InfoSection = () => {
+const InfoSection = ({ setValue }) => {
   const styles = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
@@ -69,6 +70,9 @@ const InfoSection = () => {
                 variant="outlined"
                 style={{ color: 'white', borderColor: 'white' }}
                 className={styles.learnBtn}
+                component={Link}
+                to="/about"
+                onClick={() => setValue(3)}
               >
                 <span style={{ marginRight: 10 }}>Learn More</span>
                 <ButtonArrow width={10} height={10} fill="white" />
@@ -94,6 +98,9 @@ const InfoSection = () => {
                 variant="outlined"
                 style={{ color: 'white', borderColor: 'white' }}
                 className={styles.learnBtn}
+                component={Link}
+                to="/contact"
+                onClick={() => setValue(4)}
               >
                 <span style={{ marginRight: 10 }}>Learn More</span>
                 <ButtonArrow width={10} height={10} fill="white" />
