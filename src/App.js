@@ -6,6 +6,7 @@ import Header from './components/ui/Header';
 import Footer from './components/ui/Footer';
 import LandingPage from './pages/LandingPage';
 import Services from './pages/Services';
+import CustomSoftWareDevelopment from './pages/CustomSoftwareDevelopment';
 
 function App() {
   const [value, setValue] = useState(0);
@@ -45,7 +46,12 @@ function App() {
           <Route
             exact
             path="/customsoftware"
-            component={() => <div>Custom Software</div>}
+            render={() => (
+              <CustomSoftWareDevelopment
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
           />
           <Route
             exact
