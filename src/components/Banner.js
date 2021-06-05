@@ -6,8 +6,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 // Internal Imports
-import ButtonArrow from './ButtonArrow';
-import animationData from '../../animations/landinganimation/data';
+import ButtonArrow from './ui/ButtonArrow';
+import animationData from '../animations/landinganimation/data';
 
 const useStyles = makeStyles((theme) => ({
   animation: {

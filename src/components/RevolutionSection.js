@@ -7,8 +7,8 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 // Internal Imports
-import ButtonArrow from './ButtonArrow';
-import revolutionBackground from '../../assets/repeatingBackground.svg';
+import ButtonArrow from './ui/ButtonArrow';
+import revolutionBackground from '../assets/repeatingBackground.svg';
 
 const useStyles = makeStyles((theme) => ({
   revolutionBackground: {

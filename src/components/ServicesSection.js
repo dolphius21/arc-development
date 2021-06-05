@@ -6,10 +6,10 @@ import Button from '@material-ui/core/Button';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 // Internal Imports
-import ButtonArrow from './ButtonArrow';
-import customSoftwareIcon from '../../assets/Custom Software Icon.svg';
-import mobileAppsIcon from '../../assets/mobileIcon.svg';
-import websitesIcon from '../../assets/websiteIcon.svg';
+import ButtonArrow from './ui/ButtonArrow';
+import customSoftwareIcon from '../assets/Custom Software Icon.svg';
+import mobileAppsIcon from '../assets/mobileIcon.svg';
+import websitesIcon from '../assets/websiteIcon.svg';
 
 const useStyles = makeStyles((theme) => ({
   specialTxt: {

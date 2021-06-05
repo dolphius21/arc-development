@@ -2,11 +2,11 @@
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 // Internal Imports
-import HeroBanner from './ui/Banner';
-import RevolutionSection from './ui/RevolutionSection';
-import ServicesSection from './ui/ServicesSection';
-import InfoSection from './ui/InfoSection';
-import CTASection from './ui/CTASection';
+import HeroBanner from '../components/Banner';
+import RevolutionSection from '../components/RevolutionSection';
+import ServicesSection from '../components/ServicesSection';
+import InfoSection from '../components/InfoSection';
+import CTASection from '../components/ui/CTASection';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {

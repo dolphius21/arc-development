@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
-import theme from './ui/Theme';
-import Header from './ui/Header';
-import Footer from './ui/Footer';
-import LandingPage from './LandingPage';
+import theme from './components/ui/Theme';
+import Header from './components/ui/Header';
+import Footer from './components/ui/Footer';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   const [value, setValue] = useState(0);

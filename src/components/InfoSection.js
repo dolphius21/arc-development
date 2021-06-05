@@ -6,8 +6,8 @@ import Button from '@material-ui/core/Button';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 // Internal Imports
-import infoBackground from '../../assets/infoBackground.svg';
-import ButtonArrow from './ButtonArrow';
+import infoBackground from '../assets/infoBackground.svg';
+import ButtonArrow from './ui/ButtonArrow';
 
 const useStyles = makeStyles((theme) => ({
   infoBackground: {
