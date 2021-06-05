@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   selectedMenuItem: {
     ...theme.typography.tab,
+    color: 'white',
     opacity: 1
   }
 }));
